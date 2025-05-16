@@ -1,5 +1,6 @@
     import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaDownload } from 'react-icons/fa';
     import profileImage from '../assets/profile.jpg';
+    import resume from '../assets/resume.pdf';
     import '../styles/Hero.css';
 
     const Hero = () => {
@@ -20,7 +21,7 @@
                 
                 <div className="hero-actions">
                 <a 
-                    href="/resume.pdf" 
+                    href= {resume}
                     download 
                     className="btn btn-primary btn-download"
                     aria-label="Download Resume"
