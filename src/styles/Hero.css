@@ -1,0 +1,234 @@
+    /* Hero.css */
+    .hero-section {
+    padding: 6rem 0 3rem;
+    background: linear-gradient(135deg, #f5f9ff 0%, #e6f0f9 100%);
+    position: relative;
+    overflow: hidden;
+    }
+
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    }
+
+    .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    }
+
+    .hero-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    .hero-titles {
+    margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+    display: inline-block;
+    }
+
+    .hero-summary {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 1.5rem;
+    }
+
+    .hero-summary::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
+    border-radius: 4px;
+    }
+
+    .hero-actions {
+    display: flex;
+    gap: 1rem;
+    }
+
+    .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    }
+
+    .btn-icon {
+    font-size: 1rem;
+    }
+
+    .hero-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    }
+
+    .image-frame {
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    }
+
+    .profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 8px solid white;
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .hero-image-wrapper:hover .profile-img {
+    transform: perspective(1000px) rotateY(0deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    .contact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    }
+
+    .contact-icon {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    background: var(--secondary-light);
+    padding: 0.75rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    }
+
+    .contact-info {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .contact-label {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+    }
+
+    .contact-value {
+    font-weight: 500;
+    color: var(--dark-color);
+    transition: color 0.2s ease;
+    }
+
+    .contact-value:hover {
+    color: var(--secondary-color);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+    .hero-section {
+        padding: 5rem 0 2rem;
+    }
+    
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero-text-content {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .hero-summary {
+        padding-left: 0;
+        max-width: 600px;
+    }
+    
+    .hero-summary::before {
+        display: none;
+    }
+    
+    .hero-image-wrapper {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    }
+
+    @media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-summary {
+        font-size: 1rem;
+    }
+    
+    .hero-contact-details {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .hero-section {
+        padding: 4rem 0 1.5rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-download {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .image-frame {
+        max-width: 280px;
+    }
+    }

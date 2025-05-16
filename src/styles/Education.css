@@ -1,0 +1,164 @@
+    /* Education.css */
+    .education-section {
+    background-color: #f9fbfd; /* Lighter, softer background */
+    padding: 5rem 0;
+    position: relative;
+    }
+
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    }
+
+    .section-title {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+    color: #2c3e50; /* Deep navy blue for titles */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    }
+
+    .section-icon {
+    color: #3498db; /* Bright blue for icons */
+    font-size: 1.5rem;
+    }
+
+    .education-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    }
+
+    .education-card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    box-shadow: 0 4px 12px rgba(41, 128, 185, 0.08); /* Soft blue shadow */
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    border-left: 4px solid #3498db; /* Matching blue accent */
+    }
+
+    .education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(41, 128, 185, 0.15); /* Deeper shadow on hover */
+    border-left-color: #2980b9; /* Darker blue on hover */
+    }
+
+    .education-icon {
+    color: white;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #3498db, #2c3e50); /* Gradient from blue to navy */
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    }
+
+    .education-content {
+    flex: 1;
+    }
+
+    .education-degree {
+    font-size: 1.25rem;
+    color: #2c3e50; /* Navy for degree text */
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    }
+
+    .education-meta {
+    margin-bottom: 0.5rem;
+    }
+
+    .education-institution {
+    font-weight: 600;
+    color: #3498db; /* Blue for institution */
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    }
+
+    .education-location {
+    color: #7f8c8d; /* Soft gray for location */
+    font-weight: normal;
+    }
+
+    .education-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9375rem;
+    }
+
+    .education-year {
+    background: #ecf0f1; /* Very light gray background */
+    color: #7f8c8d; /* Matching gray text */
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-weight: 500;
+    }
+
+    .education-result {
+    color: #27ae60; /* Green for results to stand out */
+    font-weight: 600; /* Slightly bolder */
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+    .education-timeline {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    }
+
+    @media (max-width: 768px) {
+    .education-section {
+        padding: 3rem 0;
+        background-color: white; /* Full white on mobile */
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    .education-card {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 2px 8px rgba(41, 128, 185, 0.1); /* Lighter shadow on mobile */
+    }
+    
+    .education-icon {
+        padding: 0.75rem;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .education-degree {
+        font-size: 1.1rem;
+    }
+    
+    .education-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .education-result {
+        background: #e8f5e9; /* Light green background on mobile */
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.5rem;
+    }
+    }
